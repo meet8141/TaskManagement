@@ -1,105 +1,132 @@
-Task Management System (TMS)
-📌 Project Overview
+# 📌 Task Management System (TMS)
 
-The Task Management System (TMS) is a Java + MySQL based project developed as part of Semester-2 coursework.
+## 📖 Project Overview
+The **Task Management System (TMS)** is a **Java + MySQL** based project developed as part of Semester-2 coursework.  
 It helps users manage their tasks efficiently with features like task creation, assignment, logging, authentication, and encryption for secure data handling.
 
-This project demonstrates core Object-Oriented Programming (OOP) concepts, database integration using JDBC, and a simple manual queue implementation for managing tasks.
+This project demonstrates:
+- **Object-Oriented Programming (OOP)**
+- **JDBC integration with MySQL**
+- **Manual Queue implementation**
+- **Basic security with encryption**
 
-🚀 Features
+---
 
-🔑 User Authentication (Register/Login system with encryption)
+## 🚀 Features
+- 🔑 **User Authentication**
+  - Registration & Login
+  - Encrypted password storage  
+- 📋 **Task Management**
+  - Add, update, remove tasks
+  - Assign tasks to users
+  - Prioritize tasks (`Low`, `Medium`, `High`)
+  - Track status (`Pending`, `In Progress`, `Completed`)
+- 📝 **Task Logs**
+  - Record of every task action performed  
+- 👥 **Assignment Requests**
+  - Users can request task assignment  
+- 📂 **Queue System**
+  - Manual **TaskQueue** (no built-in Java collections)  
+- 🔒 **Encryption & Decryption**
+  - For sensitive user data  
+- 🗄 **Database Integration**
+  - MySQL relational database backend  
 
-📋 Task Management
+---
 
-Add, update, remove, and assign tasks
+## 🛠 Tech Stack
+- **Language:** Java (JDK 8 or above)  
+- **Database:** MySQL 8.0+  
+- **Connectivity:** JDBC  
+- **Tools/IDE:** IntelliJ IDEA / Eclipse / NetBeans  
+- **Version Control:** Git  
 
-Prioritize tasks (Low, Medium, High)
+---
 
-Track task status (Pending, In Progress, Completed)
+## 📂 Project Structure
 
-📝 Task Logs (Records all actions performed on tasks)
+<pre>├── AuthService.java             # Handles user authentication
+├── DBConnection.java            # Database connection utility
+├── Encryption_Decryption.java   # Provides encryption & decryption
+├── OperationManager.java        # Main logic for task operations
+├── Task.java                    # Task entity class
+├── TaskQueue.java               # Manual queue implementation for tasks
+├── TaskLog.java                 # Records task logs
+├── User.java                    # User entity class
+├── TMSApp.java                  # Entry point (main program)
+└── taskmanagement.sql           # Database schema & sample data</pre>
 
-👥 Assignment Requests (Users can request task assignment)
 
-📂 Queue Implementation (Manual TaskQueue without built-in Java collections)
-
-🔒 Encryption & Decryption for sensitive data
-
-🗄 Database Integration with MySQL
-
-🛠 Tech Stack
-
-Language: Java (JDK 8+)
-
-Database: MySQL 8.0+
-
-Connectivity: JDBC
-
-Tools: IntelliJ IDEA / Eclipse / NetBeans, MySQL Workbench
-
-Version Control: Git
-
-📂 Project Structure
-<img width="775" height="333" alt="image" src="https://github.com/user-attachments/assets/46ea60eb-89bf-4a07-a28c-9c266de5772e" />
-🗄 Database Schema
+## 🗄 Database Schema
 
 Main tables in taskmanagement database:
 
-users → Stores user credentials & details
+- **users** → Stores user credentials & details
 
-tasks → Contains tasks with priority, status, due date, and assigned user
+- **tasks** → Contains tasks with priority, status, due date, and assigned user
 
-tasklogs → Keeps a record of actions performed on tasks
+- **tasklogs** → Keeps a record of actions performed on tasks
 
-assignmentrequests → Stores task assignment requests
+- **assignmentrequests** → Stores task assignment requests
 
-👉 Schema available in taskmanagement.sql
+👉 Schema available in [`taskmanagement.sql`](./taskmanagement.sql)
 
-⚙️ Setup Instructions
+---
 
-Clone the project
-<img width="1258" height="132" alt="image" src="https://github.com/user-attachments/assets/f2d81c17-7f95-448c-b9c9-f7c280e69d80" />
-Import Database
+## ⚙️ Setup Instructions
 
-Open MySQL Workbench
+- **Clone the project**
+<pre>git clone https://github.com/meet8141/TaskManagement.git
+cd TaskManagement </pre>
 
-Run the script from taskmanagement.sql
 
-Configure Database Connection
+- **Import Database**
+   - Open MySQL Workbench
+   - Run the script from taskmanagement.sql
 
-Open DBConnection.java
+- **Configure Database Connection**
+   - Open DBConnection.java
+   - Update database credentials:
 
-Update database credentials:
-<img width="708" height="152" alt="image" src="https://github.com/user-attachments/assets/15f79ddd-2a00-416e-9b93-09a24562dde3" />
-Compile & Run
-<img width="753" height="129" alt="image" src="https://github.com/user-attachments/assets/84d2a21b-3095-4101-8beb-ddbb81a2a8d4" />
-📖 Usage
+     <img width="708" height="152" alt="image" src="https://github.com/user-attachments/assets/15f79ddd-2a00-416e-9b93-09a24562dde3" />
 
-Login/Register as a new user
+- **Compile & Run**
 
-Create Tasks with name, description, priority, due date
 
-Assign Tasks to users
+     <img width="753" height="129" alt="image" src="https://github.com/user-attachments/assets/84d2a21b-3095-4101-8beb-ddbb81a2a8d4" />
 
-View Tasks grouped by due date or status
+---
+     
+## 📖 Usage
 
-Mark Tasks as completed or remove them
+- Login/Register as a new user
 
-Track Logs of all task operations
+- Create Tasks with name, description, priority, due date
 
-🔮 Future Enhancements
+- Assign Tasks to users
 
-Add Graphical User Interface (GUI)
+- View Tasks grouped by due date or status
 
-Email notifications for due tasks
+- Mark Tasks as completed or remove them
 
-Role-based access (Admin, User, Manager)
+- Track Logs of all task operations
 
-Export tasks and logs to CSV/PDF
+---
 
-👨‍💻 Author
+## 🔮 Future Enhancements
 
-Meet Patel
-📧 [meetpatel814116@gmail.com .]
-🎓 Semester-2 Student | AIML Branch
+- Add Graphical User Interface (GUI)
+
+- Email notifications for due tasks
+
+- Role-based access (Admin, User, Manager)
+
+- Export tasks and logs to CSV/PDF
+
+---
+
+## 👨‍💻 Author
+
+### Meet Patel
+### 📧 [meetpatel814116@gmail.com](mailto:meetpatel814116@gmail.com)
+### 🎓 Semester-2 Student | AIML Branch
